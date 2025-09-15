@@ -1,0 +1,21 @@
+1. write a program to calculate the age of an Employee 
+
+read the date of birth from user
+
+2.Write console based java application which help OYO to book hotels
+
+if booking date is equal to current date then print "Allow booing"
+
+if booking date is After current date then "Allow booking"
+
+if booking date is Before current date then "Do' not allow booking"
+
+
+3. write console based java application to help OYO hotel booking system to print the booking date and if a visitor book for 5 days then print what should be his/her checkout date in dd-MM-yyyy format
+
+***read all input from user
+
+4. write a java program to print the next weekend date from current date
+
+
+

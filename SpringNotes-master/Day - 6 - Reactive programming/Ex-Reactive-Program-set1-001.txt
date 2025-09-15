@@ -1,0 +1,50 @@
+1.consider a class called Movie
+class Movie {
+    String title;
+    double rating;
+
+    Movie(String title, double rating) {
+        this.title = title;
+        this.rating = rating;
+    }
+
+    @Override
+    public String toString() {
+        return title + " (Rating: " + rating + ")";
+    }
+}
+
+Create a Flux<Movie> and filter out movies with a rating below 4.0.
+[Hint. use Flux.just() method)
+
+2. Simulate a Flux emitting chat messages with timestamps every few seconds.
+
+consider  below class
+
+class ChatMessage {
+    String user;
+    String message;
+    LocalDateTime timestamp;
+
+    ChatMessage(String user, String message) {
+        this.user = user;
+        this.message = message;
+        this.timestamp = LocalDateTime.now();
+    }
+
+    @Override
+    public String toString() {
+        return "[" + timestamp + "] " + user + ": " + message;
+    }
+}
+
+output will be like below: 
+
+[2025-04-07T10:20:30.349190] User0: Message #0
+[2025-04-07T10:20:32.329195] User1: Message #1
+[2025-04-07T10:20:34.328439400] User2: Message #2
+[2025-04-07T10:20:36.318265300] User3: Message #3
+[2025-04-07T10:20:38.324348900] User4: Message #4
+
+
+Hint: use Flux.interval() method

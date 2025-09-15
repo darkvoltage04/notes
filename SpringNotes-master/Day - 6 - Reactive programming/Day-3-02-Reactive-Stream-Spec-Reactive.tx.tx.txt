@@ -1,0 +1,50 @@
+Reactive Stream Specification:
+
+1. Publisher
+2. Subscriber
+3. Subscription
+4. Processor
+
+interface Publisher<T>
+{
+public void subscribe(Subscriber<? Super T> s);
+}
+
+publisher represent the DataSource
+
+like DB and RemoteService etc
+
+
+
+****************************
+
+public interface Subscriber<T>
+{
+
+public void onSubscribe(Subscription s);
+public void onNext(T t)
+public void onError(Throwable t);
+public void onComplete();
+}
+******************************************
+
+public interface Subcription
+{
+public void request(long n)
+public void cancel();
+
+
+}
+
+**************************************
+public interface Processor<T, R> extends Subscriber<T>, Publisher<R> {
+}
+
+
+
+Component	Interface	Role
+Publisher	Publisher<T>	Emits data
+Subscriber	Subscriber<T>	Consumes data
+Subscription	Subscription	Manages backpressure (request/cancel)
+Processor	Processor<T, R>	(optional) Acts as both Subscriber and Publisher
+

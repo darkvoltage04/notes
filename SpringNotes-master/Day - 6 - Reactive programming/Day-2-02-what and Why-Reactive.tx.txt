@@ -1,0 +1,45 @@
+What is Reactive Programming
+
+Reactive Programming is a new programming paradigm
+
+It allows Asynchronous and non blocking
+
+3.Data flows as an Event/Message driven stream
+
+4.It support functional style code
+5.Back Pressure in data source
+Consider app request to DB for data
+step2 DB return response back to app
+step3. again app sending request for the amount of data
+step 4: once the n number of data sent by the DB server as per the requested data amount DB server event will be closed
+then app have the choice to request again for data or cancel request , once you cancel request the communication terminated 
+
+the entire process of communication with app and data source known as Back Pressure
+
+Reactive stream follows push based data base model because as the request we are pushing the data to our app
+
+and it is combination of push and pull based data flow model
+
+When to use Reactive Programming?
+
+Use Reactive Programming when there is need to build and support app that can handle high load
+
+
+Reactive App Architecture:
+
+***Handle request using non blocking style
+***Netty is a popular  a non blocking server
+         uses Event Loop Style
+*********using Project Reactor for writing non blocking code
+
+*********Spring webflux uses Netty and Project Reactor for building non blocking or reactive APIs
+
+
+  The concept of app controlling the data flow is called back pressure
+
+
+
+
+
+
+
